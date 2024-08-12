@@ -1,0 +1,25 @@
+{
+  "name": "zira",
+  "version": "1.0.1",
+  "description": "IA # Hologramme Zira - Documentation API",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/universmc/Zira.git"
+  },
+  "keywords": [
+    "test"
+  ],
+  "author": "mc",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/universmc/Zira/issues"
+  },
+  "homepage": "https://github.com/universmc/Zira#readme"
+}
