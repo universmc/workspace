@@ -1,0 +1,159 @@
+@charset "UTF-8";
+/* style.css */
+html, body {
+  min-height: 100vh;
+  min-width: 100vh;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+header {
+  display: flex;
+  min-width: 100vh;
+  min-height: 10vh;
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  min-height: 70vh;
+  min-width: 90vh;
+}
+
+.devOps {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.devOps-background {
+  background-image: url("desktop.png");
+  background-size: cover;
+  background-position: center center;
+  height: 610Px; /* ou toute autre hauteur nécessaire */
+  width: 610px;
+}
+
+.step-dev-plan {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 30px;
+}
+
+.circl-step {
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  display: flex;
+  min-width: 32px;
+  min-height: 32px;
+  border: 3px solid;
+  border-radius: 50%;
+}
+
+.img-step1 {
+  width: 32px;
+}
+
+.devPlanContent {
+  display: flex;
+  height: 610px;
+  width: 987px;
+  border: 1px solid;
+}
+
+.window-controls {
+  display: flex;
+  min-width: 100%;
+}
+
+.bg-main-container {
+  display: flex;
+  justify-content: center;
+  min-height: 100%;
+}
+
+.bg-center {
+  display: flex;
+  width: 90%;
+}
+
+.init-row {
+  display: flex;
+  min-height: 100%;
+}
+
+.img-contenair {
+  display: flex;
+  justify-content: center;
+}
+
+.cours-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+#sommaire {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  gap: 20px;
+  background-color: #eee;
+  padding: 15px;
+  margin-right: 20px;
+  border-radius: 5px;
+}
+
+#contenuCours {
+  width: 90%;
+  background-color: white;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+.markdown-contenu {
+  font-family: "Arial", sans-serif;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  padding: 15px;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.markdown-contenu h1, .markdown-contenu h2, .markdown-contenu h3 {
+  color: #333;
+}
+
+.markdown-contenu p {
+  color: #666;
+}
+
+/* Ajoutez plus de styles ici selon vos besoins */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  min-width: 100vh;
+  min-height: 10vh;
+}
+
+h2, h3 {
+  margin: 0 0 10px 0;
+}
+
+p {
+  line-height: 1.6;
+}
+
+/*# sourceMappingURL=style.css.map */

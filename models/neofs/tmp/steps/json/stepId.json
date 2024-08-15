@@ -1,0 +1,93 @@
+{
+    "steps": [
+      {
+        "numeroId": 1,
+        "titreId": "Technologies et Outils",
+        "metaDescription": "Présentation des outils et technologies utilisés, y compris DevOps, NeoFS, Codex, GPT, et plus.",
+        "examplePrompt": "Comment utiliser GPT pour l'analyse de données ?",
+        "dateCreate": "2023-01-01",
+        "dateUpdate": "2023-04-01",
+        "dateStatus": "En cours",
+        "imgUrl": "data/bg-img/devops-img.png",
+        "mdUrl": "src/inc/stepId/step1.md"
+      },
+      {
+        "numeroId": 2,
+        "titreId": "Swagger et API Documentation",
+        "metaDescription": "Exploration de l'utilisation de Swagger pour la documentation et les tests d'API.",
+        "examplePrompt": "Création d'une documentation API avec Swagger",
+        "dateCreate": "2023-02-01",
+        "dateUpdate": "2023-04-05",
+        "dateStatus": "En cours",
+        "imgUrl": "url_to_image_step2.jpg",
+        "mdUrl": "url_to_markdown_step2.md"
+      },
+      {
+        "numeroId": 3,
+        "titreId": "Algorithmes et Bibliothèques",
+        "metaDescription": "Focus sur les algorithmes clés et les bibliothèques utilisées dans le machine learning.",
+        "examplePrompt": "Implémentation d'algorithme de machine learning avec TensorFlow",
+        "dateCreate": "2023-03-01",
+        "dateUpdate": "2023-04-10",
+        "dateStatus": "En cours",
+        "imgUrl": "url_to_image_step3.jpg",
+        "mdUrl": "url_to_markdown_step3.md"
+      },
+      {
+        "numeroId": 4,
+        "titreId": "Développement Frontend",
+        "metaDescription": "Approfondissement des techniques et outils frontaux modernes, incluant HTML5, CSS3, SASS, SVG, et JavaScript, avec un accent sur React.",
+        "examplePrompt": "Intégration de React avec un backend Node.js pour une application full stack.",
+        "dateCreate": "2023-03-15",
+        "dateUpdate": "2023-04-12",
+        "dateStatus": "En cours",
+        "imgUrl": "url_to_image_step4.jpg",
+        "mdUrl": "url_to_markdown_step4.md"
+      },
+      {
+        "numeroId": 5,
+        "titreId": "Développement Backend",
+        "metaDescription": "Exploration des langages de programmation backend tels que PHP, avec l'utilisation de bases de données SQL et MySQL, et l'intégration de Node.js.",
+        "examplePrompt": "Création d'une API REST avec Node.js et Swagger pour la documentation.",
+        "dateCreate": "2023-03-20",
+        "dateUpdate": "2023-04-15",
+        "dateStatus": "En cours",
+        "imgUrl": "url_to_image_step5.jpg",
+        "mdUrl": "url_to_markdown_step5.md"
+      },
+      {
+        "numeroId": 6,
+        "titreId": "DevOps et Collaboration",
+        "metaDescription": "Discussion sur l'importance des pratiques DevOps pour l'automatisation des processus, l'amélioration de la collaboration et l'efficacité des projets.",
+        "examplePrompt": "Utilisation de chatbots pour améliorer l'engagement utilisateur et l'assistance automatisée.",
+        "dateCreate": "2023-04-01",
+        "dateUpdate": "2023-04-18",
+        "dateStatus": "En cours",
+        "imgUrl": "url_to_image_step6.jpg",
+        "mdUrl": "url_to_markdown_step6.md"
+      },
+      {
+        "numeroId": 7,
+        "titreId": "Mise à Jour et Documentation",
+        "metaDescription": "Accent sur l'importance d'une documentation complète et régulièrement mise à jour, en utilisant des outils comme Markdown et Swagger.",
+        "examplePrompt": "Stratégies pour gérer efficacement les commits et les mises à jour dans les projets GitHub.",
+        "dateCreate": "2023-04-05",
+        "dateUpdate": "2023-04-20",
+        "dateStatus": "En cours",
+        "imgUrl": "url_to_image_step7.jpg",
+        "mdUrl": "url_to_markdown_step7.md"
+      },
+      {
+        "numeroId": 8,
+        "titreId": "Contribution et Déploiement",
+        "metaDescription": "Présentation des méthodes et plateformes pour le déploiement et la contribution à des projets open-source, incluant l'utilisation de GitHub Pages.",
+        "examplePrompt": "Guide pour le déploiement d'une application web sur GitHub Pages.",
+        "dateCreate": "2023-04-10",
+        "dateUpdate": "2023-04-25",
+        "dateStatus": "En cours",
+        "imgUrl": "url_to_image_step8.jpg",
+        "mdUrl": "url_to_markdown_step8.md"
+      }
+    ]
+  }
+  
