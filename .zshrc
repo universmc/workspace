@@ -36,7 +36,6 @@
 ##  ╚═════════════════════════════════════╝     ╚═════════════════════════════════════════════════════════════════════╝
 
 
-
 alias config-repo='cd /.config/'  # Répertoire config
 
 # Chargement de groq depuis groq.sh
@@ -44,7 +43,7 @@ if [ -f ~/.config/alias.sh ]; then
     source ~/.config/module.sh
 fi
 # Chargement de groq et gcloud depuis lib.sh
-if [ -f ~/.config/lib.sh ]; then
+if [ -f ~/.config/module.sh ]; then
     source ~/.config/module.sh
 fi
 
