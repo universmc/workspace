@@ -8,6 +8,7 @@
     },
     "scripts": {
       "test": "echo \"Error: no test specified\" && exit 1",
+      "build": "node metaBot.js",
       "style": "sass --watch src/sass/windows.scss src/css/style1/playeur.css",
       "srv": "node ./srv/srv.js",
       "start": "electron .",

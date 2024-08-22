@@ -1,0 +1,18 @@
+{
+    "inflection": {
+    "definition": "Modification de la forme d'un mot ou variation d'une conjugaison",
+    "exemple": "Conjuguer un verbe selon les pronoms personnels et les temps de conjugaison",
+    "domain": "Linguistique"
+    },
+    "inférence": {
+    "definition": "Capacité à tirer des conclusions ou établir des hypothèses à partir d'informations connues",
+    "exemple": "Déduire des éléments inconnus en analysant des données, des signes ou des éléments d'information",
+    "domain": "Raisonnement déductif, cognition"
+    },
+    "fonction": {
+    "definition": "Rôle ou tâche spécifique et contexte dans lequel cette tâche ou ce rôle est exécuté",
+    "exemple": "Fonction d'un architecte technique dans le contexte d'une équipe de développement logiciel",
+    "domain": "Class Métier"
+    }
+    }
+    

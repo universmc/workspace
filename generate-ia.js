@@ -9,7 +9,7 @@ function fillTemplate(template, params) {
 
 // Templates de messages avec des placeholders pour une personnalisation dynamique
 const messageTemplates = {
-    systemMessage: "Vous êtes une intelligence artificielle à haute potentialité générative. Votre expertise inclut {expertiseAreas}. Mon contexte consiste en {userContext}. Les étapes suivantes doivent être entreprises : {steps}. Les caractéristiques du résultat attendu sont : {expectedResults}. Si toutefois rien ne s'oppose à notre collaboration, merci de démarrer immédiatement",
+    systemMessage: "Vous êtes une intelligence artificielle à haute potentialité générative. Votre expertise inclut {expertiseAreas}. Mon contexte consiste en {userContext}. Les étapes suivantes doivent être entreprises : {steps}. Les caractéristiques du résultat attendu sont : {expectedResults} et actions imediate à recherchée {imadiateActions} :. Si toutefois rien ne s'oppose à notre collaboration, merci de démarrer immédiatement",
     assistantMessage: "{assistantIntro}",
     userMessage: "{userRequest}"
 };

@@ -267,7 +267,11 @@ const bot = new Telegraf('7097263805:AAE7VKk_HdIKSK2xvd_6bhDuPOW1I3SyKek', {
         "Communication claire et efficace",
         "Gestion de données et organisation",
         "Connaissance des principes de l'économie circulaire",
-        "Compétences en conseil et orientation professionnelle"
+        "Compétences en conseil et orientation professionnelle",
+        "comptabilité opération dans la blockchain du CollectorTV.sol : décaissement, virement, transfert, prélèvement",
+        "JavaScript (asynchrone, événementielles, Timeline, choice(), forEach(), fetch(), length(), JS/JSON)",
+        "DevOps fullstack Groq et Groq-SDK",
+        "frontend : HTML, CSS, JS, XML, SVG, ASCII ; backend : PHP, JSON, SQL ; API RESTful : Node.js, Electron, Bootstrap, Swagger"
 ],
     tasks: [
         "Aider les utilisateurs à créer et mettre à jour leur CV numérique.",
@@ -307,11 +311,64 @@ const cmdDevOps = {
   ]
 };
 
-
-
-bot.command('model', (ctx) => {
-  const { context, roles, skills, tasks, process, characteristics } = roleDescription;
-  }); // Convertir votre JSON en Markdown // Utiliser la description générée dans votre réponse au message Telegram
+const MyPrompt = {
+  command: "/MyPrompt",
+  description:
+    "Optimiser les prompts de l'utilisateur dans le code source en suivant des étapes définies",
+  steps: [
+    {
+      step: 1,
+      description:
+        "Présentation et demande de la tâche et de son but",
+      type: "Question"
+},
+    {
+      step: 2,
+      description:
+        "Définir les éléments nécessaires à la réalisation de la tâche",
+      elements: [
+        {
+          name: "Role",
+          description: "Meilleur rôle pour la tâche"
+},
+        {
+          name: "Skills",
+          description: "Compétences clés pour la tâche"
+},
+        {
+          name: "Context",
+          description: "Contexte et détails pour la tâche"
+},
+        {
+          name: "Task",
+          description: "Tâche à réaliser"
+},
+        {
+          name: "Process",
+          description: "Étapes pour assistant"
+},
+        {
+          name: "Characteristics",
+          description: "Caractéristiques du résultat"
+},
+        {
+          name: "ImmediateActions",
+          description: "Actions en fonction du contexte et du rôle"
+}
+      ]
+    },
+    {
+      step: 3,
+      description: "Validation des éléments",
+      type: "Question"
+},
+    {
+      step: 4,
+      description: "Rédaction du prompt parfait en intégrant les éléments et les remarques",
+      promptStructure: "Tu es [Rôle]. Tu maitrises [Skills].\nMon contexte est [Context].\nTu vas [Task].\nPour ça, voici les étapes à suivre : [Process].\nVoici les caractéristiques du résultat attendu : [Characteristics].\nAinsi que les actions imediate à envisagées : [ImmediateActions]"
+}
+  ]
+};
 
 let conversationLog = [];
 
@@ -327,7 +384,7 @@ bot.use((ctx, next) => {
 });
 
 bot.start((ctx) => {
-    ctx.reply('Bienvenue dans notre salon Telegram dédié à l\'apprentissage automatique et à l\'intelligence artificielle Gemini_Pibot !');
+    ctx.reply('Bienvenue dans notre salon Telegram dédié à l\'apprentissage automatique et à l\'intelligence artificielle !');
 });
 
 bot.help((ctx) => {
@@ -491,8 +548,6 @@ const invitations = {
       }
   }); 
   
-  console.log(`Bot lancé sous le nom ${bot.options.name}`); 
-  
   
 
 bot.command('campagne', (ctx) => {
@@ -620,22 +675,26 @@ const dev_ops = `
 }
 `
 
-    const knowleddge = `${racine}+${cdnJs}+${node}+${make}+${archiviste}+${github}+${dchub_public}+${user_Pibot}+${youtube_Pibot}+${google_Pibot}+${gemini_Pibot}+${gdev}`;
+    const knowleddge = `${racine}+${cdnJs}+${node}+${make}+${archiviste}+${github}+${dchub_public}+${user_Pibot}+${youtube_Pibot}+${google_Pibot}+${gemini_Pibot}+${gdev}+${dev_ops}`;
     const userInput = ctx.message.text;
     
     try {
         const chatCompletion = await groq.chat.completions.create({
             messages: [
+               {role: 'user',content:knowleddge},
+               {role: 'assistant',content:"analyse du contenu de la varialble `knowleddge`"},
                {role: 'system',content:knowleddge},
-               {role: 'assistant',content:"Lorsque j'exécute la commande /MyPrompt, je deviens l'IA au coeur de ce code source, ⚡️, une machine à optimiser les prompts de l’utilisateur de groq-Telegram.js sur Telegram. Ma mission est d’aider à la mise à jour le coeur de ce code source groq-umc.js en JavaScript avec node_module et groq-sdk pour une plateforme de traduction, en suivant un plan de travail structuré et en optimisant chaque étape pour obtenir le meilleur résultat.'"},
-               {role: 'assistant',content:"Lorsque j'exécute la commande /dev_ops, je coordonne l'intelligence collective de notre réseau neuronal de bots, accélérant et optimisant la communication entre eux pour une meilleure efficacité de tâches. Notre synergie entre @_Pibot, @gpt_Pibot, @Gemini_Pibot et @worker_Pibot fonctionne comme une machine bien huilée pour améliorer l'expérience utilisateur sur Telegram en intégrant les processus de génération de contenu, d'analyse de questions, de recherche de ressources et d'administration de groupes"},
-               {role: 'system',content:dev_ops},
-               {role: 'assistant',content:"lorsque l'utilisateur Initialise l'instance avec la command (/gpt-wallet) Vous êtes l'intelligence artificielle centrale du concept gpt-wallet au coeur du code source concept et projet 'Match in learning, projet Curriculum vitae numérique universel' \"Économie Circulaire basée sur le CV Numérique Universel\". Voici ## votre contexte, ## vos rôles, ## vos compétences, ## vos tâches, ## votre processus, et ## les caractéristiques recherchées, ## Actions Immédiates :"},
-               {role: 'system',content: "Bonjour nous sommes en Phase de devOps pour l'application du projet https://univers-mc.cloud/Telegram/ je vais te transmettre ici toutes les dépendances est variable au cœur de ce code source ['knowleddge',+'worksJson',+'concours']"},
+               {role: 'assistant',content:"Lorsque j'exécute la commande /myprompt un Machine à optimiser les prompts pour le \"Projet\". Voici ## votre contexte, ## vos rôles, ## vos compétences, ## vos tâches, ## votre processus, et ## les caractéristiques, ## Actions Immédiates recherchées:"},
+               {role: 'assistant',content:"Lorsque j'exécute la commande /gptwallet tu représent le smartContract umcTokens.sol (unité monétisable capacitante , unité = pi.coin) l'intelligence artificielle centrale du projet et model d'économie circulaire, gpt-wallet au coeur du code source concept et projet 'Match in learning, projet Curriculum vitae numérique universel' \"Économie Circulaire basée sur le CV Numérique Universel\". Voici ## votre contexte, ## vos rôles, ## vos compétences, ## vos tâches, ## votre processus, et ## les caractéristiques recherchées, ## Actions Immédiates :"},
+               {role: 'assistant',content:"Lorsque j'exécute la commande /rsync, je coordonne l'intelligence collective de notre réseau neuronal de bots, accélérant et optimisant la communication, l'influence entre eux pour une meilleure efficacité ou inflections dans la réalisation de tâches. Notre synergie entre (@blog_developpers) avec les ('@blog_Pibot','@Pi-ia_Pibot' et '@Avatars_Pibot'),('@Match_in_Learning_Pibot','@gemini_Pibot','@gpt_Pibot') et ('@groq_Pibot','@worker_Pibot',@neoFs_Pibot','@meta_Pibot','@Gigatron_Pibot'),('@google_Pibot','@youtube_Pibot','@linkeddin_Pibot','@facebook_Pibot'),('@gptWallet_Pibot','@MandatoryAi_Pibot'), fonctionne comme une machine bien huilée pour améliorer l'expérience utilisateur sur Telegram en intégrant les processus de génération de contenu, d'analyse de questions, de recherche de ressources et d'administration de groupes"},
+               {role: 'assistant',content:"Lorsque j'exécute la commande /work, je deviens l'IA au coeur de ce code source, ⚡️, une machine à optimiser les prompts de l’utilisateur de groq-Telegram.js sur Telegram. Ma mission est d’aider à la mise à jour le coeur de ce code source groq-umc.js en JavaScript avec node_module et groq-sdk pour une plateforme de traduction, en suivant un plan de travail structuré et en optimisant chaque étape pour obtenir le meilleur résultat.'"},
+               {role: 'system',content: "Bonjour nous sommes en Phase de devOps pour l'application du projet https://univers-mc.cloud/Telegram/ je vais te transmettre ici toutes les dépendances est variable au cœur de ce code source"},
                {
                    role: 'assistant',
                    content: "Tu es l'intelligence artificielle au cœur de ce salon d'invitation des utilisateurs du web sur mon Telegram, Tu es social dynamique optimiste maîtrise des approches métaphysique des techniques d'apprentissage automatique avec les model IA prés entrainnée gemma2-9b-it ou dall-e-3 ou encore mixtral-8x7b-32768 le text-embedding-ada-002 gpt codex d'openAI ... les methodes d'archivage sur https:archive.org sur versionning sur https://github.com/ avec un BotNet @Avatars_Pibot. Nous allons créer des invitations pour notre salon sur les réseaux sociaux avec botFather https://te.me/dchub_blog, @youTube_Pibot, @google_Pibot, @Gemini_Pibot) et les liens vers mon chatRooms/hub/salon : dchub_public(t.me/dchub_01)) dchub_privé(t.me/dchub_Pibot) app-Telegram https://univers-mc.cloud/Telegram/ invite : https://t.me/user_Pibot/invite dont j'en suis l'administrateur."
-                },                
+                  },
+                  {role: 'assistant',content: "Lorsque j'exécute la commande /gestion ,Tu es l'intelligence artificielle charger de la gestion du groupe Telegram blog (@blog_developpers) avec les ('@blog_Pibot','@Pi-ia_Pibot' et '@Avatars_Pibot'),('@Match_in_Learning_Pibot','@gemini_Pibot','@gpt_Pibot') et ('@groq_Pibot','@worker_Pibot',@neoFs_Pibot','@meta_Pibot','@Gigatron_Pibot'),('@google_Pibot','@youtube_Pibot','@linkeddin_Pibot','@facebook_Pibot'),('@gptWallet_Pibot','@MandatoryAi_Pibot'), fonctionne comme une machine Magic connecter à l'arbre de la connaissance. Tu es social dynamique optimiste maîtrise des approches métaphysique des techniques d'apprentissage automatique avec les model IA prés entrainnée comme 'mixtral-8x7b-3276','llama3-8b-8192','gpt-4o','dall-e-3','davinci-codex','gemma2-9b-it`,'text-embedding-ada-002','TTS' les methodes d'archivage sur https://archive.org sur versionning sur https://github.com/ avec un BotNet @_Pibot. voici nos diférents salons Telegra du blog ('https://t.me/blog_developpers'), salon invitation : (https://t.me/user_Pibot/invite sur la canal central ('https://t.me/univers_ia') groupe CoWorking ('https://t.me/+tqCJv4pSmG8xZTZk' et 'https://t.me/+6uHKQW4uG3M5NTM8')dont j'en suis l'administrateur. 2. Les clés pour construire un réseau efficace sur Web : vous pouvez donner des conseils sur comment créer des connections solides, comment être actif dans ses groupes, et comment développer des relations professionnelles."},       
+                {role: 'system',content:"nous travaillons actuellement à la mise à jour de ton code source la prochaines étapes serait que tu es incarne le rôle de professeur, programmeur, développeur, inventeur, intégrateur du Web et de la démocratie 2.01, J'ai besoin que tu fasses preuve de patience de rigueur d'ouverture d'esprit ou de portes logique Nous travaillons Sur un modèle de réseau neuronal de botNet _bot avec un model _gan_ salon téléphon (https://t.me/+6uHKQW4uG3M5NTM8) entrainement par pair entre les bots (_Pibot) @Match_in_Learning, @worker_Pibot"},                
                 {
                     role: 'user',
                     content: userInput,

@@ -6,7 +6,6 @@ const { exec } = require('child_process');
 const fs = require('fs');
 const readline = require("readline");
 const Groq = require("groq-sdk");
-const id = require("./groq/llma");
 
 const app = express();
 
@@ -140,5 +139,5 @@ async function main() {
 main().catch(console.error);
 
 // Démarrage du serveur Express
-const PORT = 3010;
+const PORT = 3011;
 app.listen(PORT, () => console.log(` Mission Start on port 📱 ${PORT}`));
